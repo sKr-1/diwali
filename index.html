@@ -2,18 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Happy Diwali Fireworks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Diwali!</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div id="container">
-    <form id="nameForm">
-      <input id="nameInput" placeholder="Enter your name" autofocus autocomplete="off" />
-    </form>
+
+  <div class="input-container" id="inputContainer">
+    <input type="text" id="nameInput" placeholder="Enter your name" />
+    <button id="startBtn">Start</button>
   </div>
-  <canvas id="fireworks"></canvas>
-  <audio id="burst-sound" src="https://actions.google.com/sounds/v1/fireworks/fireworks_burst.ogg" preload="auto"></audio>
+
+  <div class="wish-text" id="wishText" style="display:none;"></div>
+
+  <canvas id="fireworkCanvas"></canvas>
+
+  <!-- One firework sound, used per launch -->
+  <audio id="fireworkSound" src="sounds/firework.mp3" preload="auto"></audio>
+
   <script src="script.js"></script>
 </body>
 </html>
